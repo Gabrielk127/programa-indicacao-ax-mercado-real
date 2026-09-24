@@ -48,7 +48,6 @@ export function ReferralForm() {
         telefone_do_indicado: (document.getElementById("indicado-telefone") as HTMLInputElement).value,
         email_do_indicado: (document.getElementById("indicado-email") as HTMLInputElement).value,
         cidade_do_indicado: (document.getElementById("indicado-cidade") as HTMLInputElement).value,
-        cpf_do_indicador: (document.getElementById("seu-cpf") as HTMLInputElement).value,
       }
 
       const response = await fetch("/api/contact", {
@@ -162,19 +161,11 @@ export function ReferralForm() {
                   </h3>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2.5">
-                    <Label htmlFor="seu-nome" className="text-[#d4d3ce]/70 text-sm font-medium ml-1">
-                      Seu Nome Completo *
-                    </Label>
-                    <Input id="seu-nome" placeholder="Seu nome" required className={inputClass} />
-                  </div>
-                  <div className="space-y-2.5">
-                    <Label htmlFor="seu-cpf" className="text-[#d4d3ce]/70 text-sm font-medium ml-1">
-                      Seu CPF/CNPJ *
-                    </Label>
-                    <Input id="seu-cpf" placeholder="000.000.000-00" required className={inputClass} />
-                  </div>
+                <div className="space-y-2.5">
+                  <Label htmlFor="seu-nome" className="text-[#d4d3ce]/70 text-sm font-medium ml-1">
+                    Seu Nome Completo *
+                  </Label>
+                  <Input id="seu-nome" placeholder="Seu nome" required className={inputClass} />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2.5">
